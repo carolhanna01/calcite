@@ -1,0 +1,507 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Calcite Avatica Project                                     [pom]
+[INFO] Apache Calcite Avatica Metrics                                     [jar]
+[INFO] Apache Calcite Avatica                                             [jar]
+[INFO] Apache Calcite Avatica Dropwizard Metrics 3                        [jar]
+[INFO] Apache Calcite Avatica Noop Driver                                 [jar]
+[INFO] Apache Calcite Avatica Server                                      [jar]
+[INFO] Apache Calcite Avatica Compatibility Kit                           [jar]
+[INFO] Avatica Standalone Server                                          [jar]
+[INFO] 
+[INFO] -------------< org.apache.calcite.avatica:avatica-parent >--------------
+[INFO] Building Apache Calcite Avatica Project 1.9.0-SNAPSHOT             [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.12.1:check (validate) @ avatica-parent ---
+[INFO] Starting audit...
+Audit done.
+
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.1.9:revision (default) @ avatica-parent ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-resource (add-resource) @ avatica-parent ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-test-resource (add-resource) @ avatica-parent ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ avatica-parent ---
+[INFO] 
+[INFO] -------------< org.apache.calcite.avatica:avatica-metrics >-------------
+[INFO] Building Apache Calcite Avatica Metrics 1.9.0-SNAPSHOT             [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.12.1:check (validate) @ avatica-metrics ---
+[INFO] Starting audit...
+Audit done.
+
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-resource (add-resource) @ avatica-metrics ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-test-resource (add-resource) @ avatica-metrics ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ avatica-metrics ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ avatica-metrics ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/metrics/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ avatica-metrics ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ avatica-metrics ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ avatica-metrics ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ avatica-metrics ---
+[INFO] Surefire report directory: /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/metrics/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Running org.apache.calcite.avatica.metrics.MetricsSystemLoaderTest
+2025-07-17 13:26:42,365 [main] INFO  - Loaded MetricsSystem class org.apache.calcite.avatica.metrics.MetricsSystemLoaderTest$MarkedNoopMetricsSystemFactory
+2025-07-17 13:26:42,366 [main] WARN  - Found multiple MetricsSystemFactory implementations: class org.apache.calcite.avatica.metrics.MetricsSystemLoaderTest$MarkedNoopMetricsSystemFactory, class org.apache.calcite.avatica.metrics.MetricsSystemLoaderTest$MarkedNoopMetricsSystemFactory. Using No-op implementation
+2025-07-17 13:26:42,367 [main] INFO  - No metrics implementation available on classpath. Using No-op implementation
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 sec - in org.apache.calcite.avatica.metrics.MetricsSystemLoaderTest
+Running org.apache.calcite.avatica.metrics.noop.NoopMetricsSystemTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.metrics.noop.NoopMetricsSystemTest
+Running org.apache.calcite.avatica.metrics.noop.NoopMetricsSystemFactoryTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.metrics.noop.NoopMetricsSystemFactoryTest
+
+Results :
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] -----------------< org.apache.calcite.avatica:avatica >-----------------
+[INFO] Building Apache Calcite Avatica 1.9.0-SNAPSHOT                     [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.12.1:check (validate) @ avatica ---
+[INFO] Starting audit...
+Audit done.
+
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-source (add-filtered-java-source) @ avatica ---
+[INFO] Source directory: /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/target/filtered-java-src added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:copy-resources (prepare-filtered-java-source) @ avatica ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-resource (add-resource) @ avatica ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-test-resource (add-resource) @ avatica ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ avatica ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ avatica ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ avatica ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 104 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/target/classes
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/src/main/java/org/apache/calcite/avatica/AvaticaResultSet.java: Some input files use or override a deprecated API.
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/src/main/java/org/apache/calcite/avatica/AvaticaResultSet.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/src/main/java/org/apache/calcite/avatica/util/ArrayImpl.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/src/main/java/org/apache/calcite/avatica/util/ArrayImpl.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ avatica ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/src/test/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ avatica ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ avatica ---
+[INFO] Surefire report directory: /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Running org.apache.calcite.avatica.test.JsonHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.448 sec - in org.apache.calcite.avatica.test.JsonHandlerTest
+Running org.apache.calcite.avatica.test.ConnectStringParserTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in org.apache.calcite.avatica.test.ConnectStringParserTest
+Running org.apache.calcite.avatica.test.AvaticaSqlExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.test.AvaticaSqlExceptionTest
+Running org.apache.calcite.avatica.test.AvaticaClientRuntimeExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.test.AvaticaClientRuntimeExceptionTest
+Running org.apache.calcite.avatica.test.AvaticaUtilsTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.calcite.avatica.test.AvaticaUtilsTest
+Running org.apache.calcite.avatica.test.AvaticaSeverityTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.test.AvaticaSeverityTest
+Running org.apache.calcite.avatica.metrics.MetricsHelperTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.metrics.MetricsHelperTest
+Running org.apache.calcite.avatica.QueryStateTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 sec - in org.apache.calcite.avatica.QueryStateTest
+Running org.apache.calcite.avatica.AvaticaStatementTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec - in org.apache.calcite.avatica.AvaticaStatementTest
+Running org.apache.calcite.avatica.util.UnsynchronizedBufferTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.util.UnsynchronizedBufferTest
+Running org.apache.calcite.avatica.util.NumberAccessorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.calcite.avatica.util.NumberAccessorTest
+Running org.apache.calcite.avatica.remote.AbstractHandlerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec - in org.apache.calcite.avatica.remote.AbstractHandlerTest
+Running org.apache.calcite.avatica.remote.MetaDataOperationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.remote.MetaDataOperationTest
+Running org.apache.calcite.avatica.remote.TypedValueTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in org.apache.calcite.avatica.remote.TypedValueTest
+Running org.apache.calcite.avatica.remote.ErrorResponseTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.remote.ErrorResponseTest
+Running org.apache.calcite.avatica.remote.ProtobufTranslationImplTest
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec - in org.apache.calcite.avatica.remote.ProtobufTranslationImplTest
+Running org.apache.calcite.avatica.remote.AvaticaHttpClientFactoryTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.384 sec - in org.apache.calcite.avatica.remote.AvaticaHttpClientFactoryTest
+Running org.apache.calcite.avatica.remote.AvaticaHttpClientTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.calcite.avatica.remote.AvaticaHttpClientTest
+Running org.apache.calcite.avatica.remote.KerberosConnectionTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec - in org.apache.calcite.avatica.remote.KerberosConnectionTest
+Running org.apache.calcite.avatica.remote.ProtobufServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.remote.ProtobufServiceTest
+Running org.apache.calcite.avatica.remote.ProtobufSerializationTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in org.apache.calcite.avatica.remote.ProtobufSerializationTest
+Running org.apache.calcite.avatica.remote.ProtobufHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in org.apache.calcite.avatica.remote.ProtobufHandlerTest
+Running org.apache.calcite.avatica.remote.ExecuteBatchRequestTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in org.apache.calcite.avatica.remote.ExecuteBatchRequestTest
+Running org.apache.calcite.avatica.FrameTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.calcite.avatica.FrameTest
+Running org.apache.calcite.avatica.AvaticaConnectionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec - in org.apache.calcite.avatica.AvaticaConnectionTest
+
+Results :
+
+Tests run: 148, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ---< org.apache.calcite.avatica:avatica-metrics-dropwizardmetrics3 >----
+[INFO] Building Apache Calcite Avatica Dropwizard Metrics 3 1.9.0-SNAPSHOT [4/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.12.1:check (validate) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] Starting audit...
+Audit done.
+
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-resource (add-resource) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-test-resource (add-resource) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/metrics-dropwizardmetrics3/src/test/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ avatica-metrics-dropwizardmetrics3 ---
+[INFO] Surefire report directory: /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/metrics-dropwizardmetrics3/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardMeterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardMeterTest
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardTimerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardTimerTest
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardMetricsSystemTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardMetricsSystemTest
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardMetricsSystemFactoryTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardMetricsSystemFactoryTest
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardGaugeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardGaugeTest
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardCounterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardCounterTest
+Running org.apache.calcite.avatica.metrics.dropwizard3.DropwizardHistogramTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.calcite.avatica.metrics.dropwizard3.DropwizardHistogramTest
+
+Results :
+
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] -----------< org.apache.calcite.avatica:avatica-noop-driver >-----------
+[INFO] Building Apache Calcite Avatica Noop Driver 1.9.0-SNAPSHOT         [5/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.12.1:check (validate) @ avatica-noop-driver ---
+[INFO] Starting audit...
+Audit done.
+
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-resource (add-resource) @ avatica-noop-driver ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-test-resource (add-resource) @ avatica-noop-driver ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ avatica-noop-driver ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ avatica-noop-driver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ avatica-noop-driver ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ avatica-noop-driver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/noop-driver/src/test/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ avatica-noop-driver ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ avatica-noop-driver ---
+[INFO] 
+[INFO] -------------< org.apache.calcite.avatica:avatica-server >--------------
+[INFO] Building Apache Calcite Avatica Server 1.9.0-SNAPSHOT              [6/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.12.1:check (validate) @ avatica-server ---
+[INFO] Starting audit...
+Audit done.
+
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-resource (add-resource) @ avatica-server ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9:add-test-resource (add-resource) @ avatica-server ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ avatica-server ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ avatica-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ avatica-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 17 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/target/classes
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/main/java/org/apache/calcite/avatica/jdbc/JdbcMeta.java: Some input files use or override a deprecated API.
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/main/java/org/apache/calcite/avatica/jdbc/JdbcMeta.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ avatica-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 0 resource to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ avatica-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/target/test-classes
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/remote/RemoteMetaTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/remote/RemoteMetaTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[37,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[41,41] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[44,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[51,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[55,41] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[58,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[65,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[69,22] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[72,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[79,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[83,41] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[86,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[93,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[97,41] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[100,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[107,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[111,41] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[114,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[121,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[125,22] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[128,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[135,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+      (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[139,41] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[142,54] cannot find symbol
+  symbol:   method getConfig()
+  location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[INFO] 24 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Calcite Avatica Project 1.9.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Calcite Avatica Project ..................... SUCCESS [  0.891 s]
+[INFO] Apache Calcite Avatica Metrics ..................... SUCCESS [  0.634 s]
+[INFO] Apache Calcite Avatica ............................. SUCCESS [ 19.037 s]
+[INFO] Apache Calcite Avatica Dropwizard Metrics 3 ........ SUCCESS [  0.718 s]
+[INFO] Apache Calcite Avatica Noop Driver ................. SUCCESS [  0.258 s]
+[INFO] Apache Calcite Avatica Server ...................... FAILURE [  1.132 s]
+[INFO] Apache Calcite Avatica Compatibility Kit ........... SKIPPED
+[INFO] Avatica Standalone Server .......................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.771 s
+[INFO] Finished at: 2025-07-17T13:27:03+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project avatica-server: Compilation failure: Compilation failure: 
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[37,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[41,41] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[44,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[51,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[55,41] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[58,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[65,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[69,22] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[72,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[79,63] incompatible types: java.lang.String[] cannot be converted to java.lang.String
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[83,41] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[86,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[93,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[97,41] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[100,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[107,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[111,41] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[114,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[121,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[125,22] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[128,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[135,9] no suitable method found for withSpnego(java.lang.String,java.lang.String,java.lang.String[])
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.apache.calcite.avatica.server.HttpServer.Builder.withSpnego(java.lang.String,java.lang.String) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[139,41] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/calcite/avatica/server/src/test/java/org/apache/calcite/avatica/server/HttpServerBuilderTest.java:[142,54] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable server of type org.apache.calcite.avatica.server.HttpServer
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :avatica-server

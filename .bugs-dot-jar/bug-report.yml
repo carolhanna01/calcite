@@ -1,0 +1,168 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Josh Elser
+        '@username': elserj
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>Have you logged a bug on Jetty? Is fixing Jetty an option?</p>
+          '@author': julianhyde
+          '@created': Thu, 9 Jun 2016 15:51:16 +0000
+          '@id': '15322746'
+        - '#text': '<blockquote><p>Have you logged a bug on Jetty?</p></blockquote>
+
+
+            <p>Not yet. Need to do some searching first to see if this was already
+            addressed.</p>
+
+
+            <blockquote><p>is fixing Jetty an option?</p></blockquote>
+
+
+            <p>Even if we could fix Jetty, the existing API provided for downstream
+            projects to configure the Avatica server doesn''t expose the allowedRoles
+            option (I didn''t realize it affected things for the SPNEGO auth when
+            implementing it &#8211; only wired it up for Basic and Digest auth). Either
+            way, we''re going to have to add some code &#8211; the Jetty bug is just
+            going to require downstream users to have to explicitly list all roles
+            instead of just setting <tt>*</tt> which is more of a nuisance than a
+            limitation.</p>'
+          '@author': elserj
+          '@created': Thu, 9 Jun 2016 15:56:31 +0000
+          '@id': '15322755'
+        - '#text': <p>Fixed in <a href="https://git1-us-west.apache.org/repos/asf?p=calcite.git;a=commit;h=f68ae55ca3eb9241a47d956a49a4b407ce40a565"
+            class="external-link" target="_blank" rel="nofollow noopener">https://git1-us-west.apache.org/repos/asf?p=calcite.git;a=commit;h=f68ae55ca3eb9241a47d956a49a4b407ce40a565</a></p>
+          '@author': elserj
+          '@created': Thu, 9 Jun 2016 22:47:16 +0000
+          '@id': '15323542'
+        - '#text': <p>Resolved in release avatica-1.9.0 (2016/11/01).</p>
+          '@author': julianhyde
+          '@created': Mon, 31 Oct 2016 04:16:07 +0000
+          '@id': '15621182'
+      component: avatica
+      created: Thu, 9 Jun 2016 15:22:41 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 8 years, 38 weeks, 3 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i2z887:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>When setting up the Jetty security Constraint class, Jetty\
+        \ treats Kerberos realms as \"roles\". When configuring allowed users to Jetty\
+        \ with some constraint, you have to set what roles (realms) are allowed.</p>\n\
+        \n<p>Presently, Avatica just sets the realm of the server's principal as allowed,\
+        \ which means that in some multi-realm KDC (or cross-domain MIT KRB+Active\
+        \ Directory) setup, users from the other realm which should be allowed are\
+        \ denied.</p>\n\n<p>Even better, Jetty's syntax for <tt>&#42;</tt> for allowing\
+        \ any role (realm) doesn't actually work. Their logic in 9.2.15 for <tt>ConstraintSecurityHandler</tt>\
+        \ appears broken:</p>\n\n<div class=\"code panel\" style=\"border-width: 1px;\"\
+        ><div class=\"codeContent panelContent\">\n<pre class=\"code-java\">     \
+        \   <span class=\"code-comment\">//handle * role constraint\n</span>     \
+        \   <span class=\"code-keyword\">if</span> (roleInfo.isAnyRole() &amp;&amp;\
+        \ request.getUserPrincipal() != <span class=\"code-keyword\">null</span> &amp;&amp;\
+        \ isUserInRole)\n        {\n            <span class=\"code-keyword\">return</span>\
+        \ <span class=\"code-keyword\">true</span>;\n        }\n</pre>\n</div></div>\n\
+        \n<p>The above check should let users through with any role when <tt>isAnyRole()</tt>\
+        \ returns true, but the final <tt>isUserInRole</tt> check requires that the\
+        \ role is explicitly listed in the list of allowedRoles.</p>\n\n<p>As such,\
+        \ we're going to need to expose an API which allows users to set a list of\
+        \ allowed realms since Jetty is busted to make Kerberos authentication actually\
+        \ work correctly.</p>\n\n<p>Thanks to <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=kliew\"\
+        \ class=\"user-hover\" rel=\"kliew\">kliew</a> for bringing this one to my\
+        \ attention.</p>"
+      due: null
+      environment: null
+      fixVersion: avatica-1.9.0
+      issuelinks:
+        issuelinktype:
+          '@id': '10030'
+          name: Reference
+          outwardlinks:
+            '@description': relates to
+            issuelink:
+              issuekey:
+                '#text': PHOENIX-3004
+                '@id': '12980302'
+      key:
+        '#text': CALCITE-1282
+        '@id': '12977259'
+      labels: null
+      link: https://issues.apache.org/jira/browse/CALCITE-1282
+      priority:
+        '#text': Critical
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/critical.svg
+        '@id': '2'
+      project:
+        '#text': Calcite
+        '@id': '12315524'
+        '@key': CALCITE
+      reporter:
+        '#text': Josh Elser
+        '@username': elserj
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 9 Jun 2016 22:47:16 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Avatica will only accept SPNEGO-authenticated clients from the same
+        realm as the server's principal
+      title: '[CALCITE-1282] Avatica will only accept SPNEGO-authenticated clients
+        from the same realm as the server''s principal'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Mon, 31 Oct 2016 04:16:07 +0000
+      version: avatica-1.8.0
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
