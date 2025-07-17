@@ -1,0 +1,125 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Nick Dimiduk
+        '@username': ndimiduk
+      attachments:
+        attachment:
+          '@author': ndimiduk
+          '@created': Mon, 6 Apr 2015 22:49:16 +0000
+          '@id': '12723474'
+          '@name': CALCITE-670.00.patch
+          '@size': '5469'
+      comments:
+        comment:
+        - '#text': <p>Fixed in <a href="http://git-wip-us.apache.org/repos/asf/incubator-calcite/commit/5f57f789"
+            class="external-link" target="_blank" rel="nofollow noopener">http://git-wip-us.apache.org/repos/asf/incubator-calcite/commit/5f57f789</a>.</p>
+          '@author': julianhyde
+          '@created': Tue, 7 Apr 2015 00:54:42 +0000
+          '@id': '14482336'
+        - '#text': <p>Resolved in release 1.2.0-incubating (2015-04-16)</p>
+          '@author': julianhyde
+          '@created': Thu, 16 Apr 2015 08:35:07 +0000
+          '@id': '14497746'
+      created: Mon, 6 Apr 2015 22:48:25 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 10 years, 15 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i2cvj3:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>Per title.</p>
+      due: null
+      environment: null
+      fixVersion: 1.2.0-incubating
+      issuelinks:
+        issuelinktype:
+          '@id': '10001'
+          inwardlinks:
+            '@description': is depended upon by
+            issuelink:
+              issuekey:
+                '#text': PHOENIX-1824
+                '@id': '12819101'
+          name: dependent
+      key:
+        '#text': CALCITE-670
+        '@id': '12818733'
+      labels:
+        label: avatica
+      link: https://issues.apache.org/jira/browse/CALCITE-670
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Calcite
+        '@id': '12315524'
+        '@key': CALCITE
+      reporter:
+        '#text': Nick Dimiduk
+        '@username': ndimiduk
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Tue, 7 Apr 2015 00:54:42 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: AvaticaPreparedStatement should support execute() and executeUpdate()
+      title: '[CALCITE-670] AvaticaPreparedStatement should support execute() and
+        executeUpdate()'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 16 Apr 2015 08:35:07 +0000
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
