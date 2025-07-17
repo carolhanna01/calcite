@@ -1,0 +1,190 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Ruben Q L
+        '@username': rubenql
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>I've added a unit test in the PR that shows the issue.</p>
+          '@author': rubenql
+          '@created': Wed, 12 Mar 2025 10:57:19 +0000
+          '@id': '17934480'
+        - '#text': '<p>Thanks for reporting this <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rubenql"
+            class="user-hover" rel="rubenql">rubenql</a>! Indeed this seems like a
+            regression so ideally we should not ship 1.39.0 without addressing this.</p>
+
+
+            <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=mbudiu"
+            class="user-hover" rel="mbudiu">mbudiu</a> Since you were involved in
+            <a href="https://issues.apache.org/jira/browse/CALCITE-6413" title="SqlValidator
+            does not invoke  TypeCoercionImpl::binaryComparisonCoercion for both NATURAL
+            and USING join conditions" class="issue-link" data-issue-key="CALCITE-6413"><del>CALCITE-6413</del></a>
+            do you mind taking a look in Ruben''s proposal to address the problem?</p>'
+          '@author': zabetak
+          '@created': Wed, 12 Mar 2025 16:01:58 +0000
+          '@id': '17934584'
+        - '#text': '<p>Thanks for the feedback, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=zabetak"
+            class="user-hover" rel="zabetak">zabetak</a>.<br/>
+
+            The PR got approval from <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=mbudiu"
+            class="user-hover" rel="mbudiu">mbudiu</a> (thanks for the quick review)!<br/>
+
+            I have squashed commits, I think it''s good to go. Since we are in a code-freeze
+            situation in the middle of a RC generation, I''ll let you handle the merge
+            as RM, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=zabetak"
+            class="user-hover" rel="zabetak">zabetak</a>.</p>'
+          '@author': rubenql
+          '@created': Wed, 12 Mar 2025 17:20:29 +0000
+          '@id': '17934608'
+        - '#text': <p>Fixed in <a href="https://github.com/apache/calcite/commit/ed36338148810497cd6fcaf9ddcd3812ee94a3d9"
+            class="external-link" target="_blank" rel="nofollow noopener">ed36338148810497cd6fcaf9ddcd3812ee94a3d9</a>.
+            Thanks for the PR <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rubenql"
+            class="user-hover" rel="rubenql">rubenql</a> and the quick review <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=mbudiu"
+            class="user-hover" rel="mbudiu">mbudiu</a>!</p>
+          '@author': zabetak
+          '@created': Thu, 13 Mar 2025 08:08:56 +0000
+          '@id': '17935086'
+        - '#text': <p>Resolved in release 1.39.0 (2025-03-16)</p>
+          '@author': zabetak
+          '@created': Sun, 16 Mar 2025 11:24:42 +0000
+          '@id': '17935975'
+      component: core
+      created: Wed, 12 Mar 2025 10:17:14 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 17 weeks, 4 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z1uq88:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p><a href=\"https://issues.apache.org/jira/browse/CALCITE-6413\"\
+        \ title=\"SqlValidator does not invoke  TypeCoercionImpl::binaryComparisonCoercion\
+        \ for both NATURAL and USING join conditions\" class=\"issue-link\" data-issue-key=\"\
+        CALCITE-6413\"><del>CALCITE-6413</del></a> introduced the following code in\
+        \ <tt>SqlToRelConverter#convertUsing</tt> :</p>\n\n<div class=\"code panel\"\
+        \ style=\"border-width: 1px;\"><div class=\"codeContent panelContent\">\n\
+        <pre class=\"code-java\">\nRelDataType resultType =\n  validator().getTypeCoercion().commonTypeForBinaryComparison(\n\
+        \    comparedTypes.get(0), comparedTypes.get(1));\n<span class=\"code-keyword\"\
+        >if</span> (resultType == <span class=\"code-keyword\">null</span>) {\n  <span\
+        \ class=\"code-comment\">// This should never happen, since the program has\
+        \ been validated.\n</span>  <span class=\"code-keyword\">throw</span> <span\
+        \ class=\"code-keyword\">new</span> IllegalArgumentException(<span class=\"\
+        code-quote\">\"Cannot join on field `\"</span> + name\n    + <span class=\"\
+        code-quote\">\"` because the types are not comparable: \"</span> + comparedTypes);\n\
+        }\n</pre>\n</div></div>\n\n<p>This can cause regressions on downstream projects\
+        \ which use their own TypeCoercion, and which decide to return <tt>null</tt>\
+        \ in some circumstances, e.g. to avoid forcing any coercion from Calcite planner\
+        \ side, and leave the original expression as it is because they rely on a\
+        \ runtime engine coercion (outside of Calcite scope).</p>\n\n<p>Notice that\
+        \ the above code (to convert Join's using condition) is NOT aligned with code\
+        \ for binary call expressions, as we can see here:<br/>\n<a href=\"https://github.com/apache/calcite/blob/main/core/src/main/java/org/apache/calcite/sql/validate/implicit/TypeCoercionImpl.java#L244\"\
+        \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/calcite/blob/main/core/src/main/java/org/apache/calcite/sql/validate/implicit/TypeCoercionImpl.java#L244</a><br/>\n\
+        If the commonTypeForBinaryComparison returns null, then the binary call is\
+        \ left untouched (no coercion), and the process goes on, without any exception.<br/>\n\
+        <tt>SqlToRelConverter#convertUsing</tt> should probably behave in the same\
+        \ way to avoid any regression, i.e.:</p>\n<div class=\"code panel\" style=\"\
+        border-width: 1px;\"><div class=\"codeContent panelContent\">\n<pre class=\"\
+        code-java\">\nRelDataType resultType =\n  validator().getTypeCoercion().commonTypeForBinaryComparison(\n\
+        \    comparedTypes.get(0), comparedTypes.get(1));\n<span class=\"code-keyword\"\
+        >if</span> (resultType == <span class=\"code-keyword\">null</span>) {\n  <span\
+        \ class=\"code-comment\">// keep old code, no expcetion\n</span>  list.add(rexBuilder.makeCall(SqlStdOperatorTable.EQUALS,\
+        \ operands));\n} <span class=\"code-keyword\">else</span> {\n  <span class=\"\
+        code-comment\">// <span class=\"code-keyword\">new</span> code from CALCITE-6413\n\
+        </span>  List&lt;RexNode&gt; castedOperands = <span class=\"code-keyword\"\
+        >new</span> ArrayList&lt;&gt;();\n  ...\n  list.add(rexBuilder.makeCall(SqlStdOperatorTable.EQUALS,\
+        \ \n}\n</pre>\n</div></div>"
+      due: null
+      environment: null
+      fixVersion: 1.39.0
+      issuelinks:
+        issuelinktype:
+          '@id': '12310560'
+          inwardlinks:
+            '@description': is caused by
+            issuelink:
+              issuekey:
+                '#text': CALCITE-6413
+                '@id': '13579988'
+          name: Problem/Incident
+      key:
+        '#text': CALCITE-6885
+        '@id': '13611556'
+      labels:
+        label: pull-request-available
+      link: https://issues.apache.org/jira/browse/CALCITE-6885
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Calcite
+        '@id': '12315524'
+        '@key': CALCITE
+      reporter:
+        '#text': Ruben Q L
+        '@username': rubenql
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 13 Mar 2025 08:08:56 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: SqlToRelConverter#convertUsing should not fail if commonTypeForBinaryComparison
+        returns null
+      title: '[CALCITE-6885] SqlToRelConverter#convertUsing should not fail if commonTypeForBinaryComparison
+        returns null'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Sun, 16 Mar 2025 11:24:42 +0000
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
