@@ -90,8 +90,7 @@ public abstract class AvaticaPreparedStatement
   }
 
   public int executeUpdate() throws SQLException {
-    getConnection().executeQueryInternal(this, signature, null);
-    return updateCount;
+    throw new UnsupportedOperationException(); // TODO:
   }
 
   public void setNull(int parameterIndex, int sqlType) throws SQLException {
@@ -187,10 +186,7 @@ public abstract class AvaticaPreparedStatement
   }
 
   public boolean execute() throws SQLException {
-    getConnection().executeQueryInternal(this, signature, null);
-    // Result set is null for DML or DDL.
-    // Result set is closed if user cancelled the query.
-    return openResultSet != null && !openResultSet.isClosed();
+    throw new UnsupportedOperationException();
   }
 
   public void addBatch() throws SQLException {
