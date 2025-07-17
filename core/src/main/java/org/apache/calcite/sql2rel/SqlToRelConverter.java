@@ -3458,21 +3458,22 @@ public class SqlToRelConverter {
           validator().getTypeCoercion().commonTypeForBinaryComparison(
               comparedTypes.get(0), comparedTypes.get(1));
       if (resultType == null) {
-        // Leave call unchanged (as it happens in TypeCoercionImpl#binaryComparisonCoercion)
-        list.add(rexBuilder.makeCall(SqlStdOperatorTable.EQUALS, operands));
-      } else {
-        List<RexNode> castedOperands = new ArrayList<>();
-        for (int i = 0; i < operands.size(); i++) {
-          RexNode operand = operands.get(i);
-          RelDataType fieldType = comparedTypes.get(i);
-          RexNode expr = operand;
-          if (!fieldType.equals(resultType)) {
-            expr = rexBuilder.makeCast(resultType, operand, true, false);
-          }
-          castedOperands.add(expr);
-        }
-        list.add(rexBuilder.makeCall(SqlStdOperatorTable.EQUALS, castedOperands));
+        // This should never happen, since the program has been validated.
+        throw new IllegalArgumentException("Cannot join on field `" + name
+            + "` because the types are not comparable: " + comparedTypes);
       }
+
+      List<RexNode> castedOperands = new ArrayList<>();
+      for (int i = 0; i < operands.size(); i++) {
+        RexNode operand = operands.get(i);
+        RelDataType fieldType = comparedTypes.get(i);
+        RexNode expr = operand;
+        if (!fieldType.equals(resultType)) {
+          expr = rexBuilder.makeCast(resultType, operand, true, false);
+        }
+        castedOperands.add(expr);
+      }
+      list.add(rexBuilder.makeCall(SqlStdOperatorTable.EQUALS, castedOperands));
     }
     return RexUtil.composeConjunction(rexBuilder, list);
   }
