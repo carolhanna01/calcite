@@ -15,7 +15,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.apache</groupId>
@@ -34,7 +34,7 @@ limitations under the License.
   <!-- More project information. -->
   <name>Apache Calcite Avatica Project</name>
   <description>Avatica is a JDBC driver framework which is a part of Apache Calcite</description>
-  <url>http://calcite.apache.org/avatica</url>
+  <url>https://calcite.apache.org/avatica</url>
   <inceptionYear>2012</inceptionYear>
 
   <mailingLists>
@@ -43,7 +43,7 @@ limitations under the License.
       <subscribe>dev-subscribe@calcite.apache.org</subscribe>
       <unsubscribe>dev-unsubscribe@calcite.apache.org</unsubscribe>
       <post>dev@calcite.apache.org</post>
-      <archive>http://mail-archives.apache.org/mod_mbox/calcite-dev</archive>
+      <archive>https://mail-archives.apache.org/mod_mbox/calcite-dev</archive>
     </mailingList>
   </mailingLists>
 
@@ -74,7 +74,7 @@ limitations under the License.
     <httpclient.version>4.5.2</httpclient.version>
     <httpcore.version>4.4.4</httpcore.version>
     <hydromatic-toolbox.version>0.3</hydromatic-toolbox.version>
-    <jackson.version>2.6.3</jackson.version>
+    <jackson.version>2.15.3</jackson.version>
     <jcip-annotations.version>1.0-1</jcip-annotations.version>
     <jcommander.version>1.48</jcommander.version>
     <jetty.version>9.2.15.v20160210</jetty.version>
@@ -92,7 +92,7 @@ limitations under the License.
     <protobuf.version>3.0.0-beta-1</protobuf.version>
     <scott-data-hsqldb.version>0.1</scott-data-hsqldb.version>
     <servlet.version>3.0.1</servlet.version>
-    <slf4j.version>1.7.13</slf4j.version>
+    <slf4j.version>1.7.36</slf4j.version>
   </properties>
 
   <issueManagement>
@@ -420,7 +420,7 @@ limitations under the License.
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <links>
-            <link>http://docs.oracle.com/javase/8/docs/api/</link>
+            <link>https://docs.oracle.com/javase/8/docs/api/</link>
           </links>
           <tags>
             <tag>
@@ -598,7 +598,7 @@ limitations under the License.
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <links>
-            <link>http://docs.oracle.com/javase/8/docs/api/</link>
+            <link>https://docs.oracle.com/javase/8/docs/api/</link>
           </links>
           <tags>
             <tag>
@@ -629,7 +629,7 @@ limitations under the License.
     <repository>
       <id>central</id>
       <name>Central Repository</name>
-      <url>http://repo.maven.apache.org/maven2</url>
+      <url>https://repo.maven.apache.org/maven2</url>
       <layout>default</layout>
       <snapshots>
         <enabled>false</enabled>
